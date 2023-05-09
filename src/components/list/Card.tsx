@@ -4,7 +4,7 @@ import axios from 'axios';
 import Types from '@/components/Types';
 
 import useCurrentStore from '@/zustand/current.store';
-// import useDrawerMobileStore from '@/zustand/drawer_mobile.store';
+import useDrawerMobileStore from '@/zustand/drawer_mobile.store';
 
 import { blob, no_pokemon } from '@/assets/images';
 import { Detail } from '@/interface';
@@ -18,7 +18,7 @@ const Card: React.FC<Props> = ({ url }) => {
    const [data, setData] = useState<Detail>();
 
    const { setCurrent, fetchOtherInfor }: any = useCurrentStore();
-   // const { setOpen } = useDrawerMobileStore();
+   const { setOpen } = useDrawerMobileStore();
 
    useEffect(() => {
       const getDetail = async () => {
@@ -33,9 +33,9 @@ const Card: React.FC<Props> = ({ url }) => {
    }, [url]);
 
    const handleClick = async () => {
-      // if (window.innerWidth < 768) {
-      //    setOpen();
-      // }
+      if (window.innerWidth < 768) {
+         setOpen();
+      }
       setCurrent(data);
       await fetchOtherInfor();
    };
@@ -54,7 +54,7 @@ const Card: React.FC<Props> = ({ url }) => {
             />
          </div>
          <div className='absolute -top-5 xl:top-0 right-0 w-full h-full flex flex-col items-center'>
-            <div className='w-full flex justify-center mb-3'>
+            <div className='w-full flex justify-center xl:mb-3'>
                <img
                   src={getImage(data.id)}
                   alt={data.name}

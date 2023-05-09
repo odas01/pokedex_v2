@@ -4,7 +4,7 @@ import Types from '@/components/Types';
 import Weaknesses from './Weaknesses';
 import Evolution from './Evolution';
 import Description from './Description';
-import Stat from './Stat';
+// import Stat from './Stat';
 import Title from './Title';
 
 import useCurrentStore from '@/zustand/current.store';
@@ -26,7 +26,7 @@ const Detail = () => {
          {!loading ? (
             current ? (
                <>
-                  <div className='absolute -top-24 right-1/2 translate-x-1/2'>
+                  <div className='z-20 absolute -top-16 xl:-top-24 right-1/2 translate-x-1/2'>
                      <img
                         src={urlImage}
                         className='max-w-[350px] lg:max-h-[20vh] max-h-[18vh] h-[200px] object-contain image-rendering'
@@ -63,7 +63,7 @@ const Detail = () => {
                         </div>
 
                         {/* TYPE  & WEAKNESSES */}
-                        <div className='flex w-full mt-4'>
+                        <div className='flex w-full mt-6 xl:mt-8'>
                            <div className='flex-1 flex flex-col items-center'>
                               <span className='font-semibold text-sm lg:text-base mb-3'>
                                  Types
@@ -76,27 +76,27 @@ const Detail = () => {
                            </div>
                            <div className='flex-1 flex flex-col items-center'>
                               <span className='font-semibold text-sm lg:text-base mb-3'>
-                                 Weaknesses
+                                 ❌ Weaknesses ❌
                               </span>
                               <Weaknesses />
                            </div>
                         </div>
 
                         {/* DESCRIPTION */}
-                        <div className='mt-6 w-3/4'>
+                        <div className='mt-6 xl:mt-8 w-3/4'>
                            <Description />
                         </div>
 
                         {/* STATS */}
-                        <div className='mt-auto flex flex-col items-center p-4 w-full '>
+                        {/* <div className='mt-auto flex flex-col items-center p-4 w-full '>
                            <span className='font-semibold text-sm lg:text-base mb-3'>
                               Stats
                            </span>
                            <Stat />
-                        </div>
+                        </div> */}
 
                         {/* EVOLUTONS */}
-                        <div className='mt-6 flex flex-col items-center w-full'>
+                        <div className='mt-auto flex flex-col items-center w-full'>
                            <span className='font-semibold text-sm lg:text-base mb-3'>
                               Evolutions
                            </span>

@@ -19,10 +19,9 @@ const Title: React.FC<Props> = ({ name }) => {
 
       setShow(false);
    };
-   console.log(special_form);
 
    return (
-      <div className='relative w-2/3 text-center text-[#000] text-base font-bold mt-2'>
+      <div className='relative min-w-[75%] text-center text-[#000] text-base font-bold mt-2'>
          <div
             onClick={() => setShow(!show)}
             className={`relative py-1 ${

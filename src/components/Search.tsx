@@ -14,11 +14,11 @@ const Search = () => {
    };
 
    return (
-      <div className='flex-1 flex items-center pl-8 pr-2 py-2 h-14 rounded-full bg-white shadow-[0px_3px_8px_#8b8888]'>
+      <div className='flex-1 flex items-center pl-8 pr-2 py-2 h-12 xl:h-14 rounded-full bg-white shadow-[0px_3px_8px_#8b8888]'>
          <input
             value={value}
             type='text'
-            className='flex-1 h-full pr-4 text-base border-r border-[#E3E3E4]'
+            className='flex-1 h-full pr-4 text-sm xl:text-base border-r border-[#E3E3E4]'
             placeholder='Enter name or random number...'
             onChange={(e) => setValue(e.target.value)}
             onKeyUp={(e) => e.key === 'Enter' && handleSearch()}

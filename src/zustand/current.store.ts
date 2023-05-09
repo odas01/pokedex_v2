@@ -37,11 +37,11 @@ const initialValue = {
 
 const useCurrentStore = create<Store>((set, get) => ({
    ...initialValue,
-   setCurrent: (value: Detail) => set({ current: value }),
-   setSpecies: (value: Species) => set({ species: value }),
-   setSpecialForm: (value: SpecialForm) => set({ special_form: value }),
-   setLoading: (value: boolean) => set({ loading: value }),
-   fetchDetail: async (value: string | number) => {
+   setCurrent: (value) => set({ current: value }),
+   setSpecies: (value) => set({ species: value }),
+   setSpecialForm: (value) => set({ special_form: value }),
+   setLoading: (value) => set({ loading: value }),
+   fetchDetail: async (value) => {
       try {
          const current: any = await pokeApi.getDetail(value);
          set({ current });

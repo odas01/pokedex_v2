@@ -44,7 +44,6 @@ const Weaknesses = () => {
       };
       weaknessFilter();
    }, [current]);
-   console.log(weaknesses);
 
    return <Types types={weaknesses} />;
 };

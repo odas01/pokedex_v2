@@ -3,10 +3,9 @@ import { Row, Col } from 'antd';
 import Card from '@/components/list/Card.tsx';
 
 import usePokemonsStore from '@/zustand/pokemons.store';
-import Loading from '../Loading';
 
 const ListCard = () => {
-   const { pokemons, loading } = usePokemonsStore();
+   const { pokemons } = usePokemonsStore();
 
    return (
       <>
@@ -22,11 +21,6 @@ const ListCard = () => {
             <p className='text-center text-lg text-[#919191] font-semibold'>
                No pokemons
             </p>
-         )}
-         {loading && (
-            <div className='flex h-10'>
-               <Loading />
-            </div>
          )}
       </>
    );

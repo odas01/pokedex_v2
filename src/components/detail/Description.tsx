@@ -29,7 +29,7 @@ const Description = () => {
    }, [species]);
 
    return (
-      <p className='text-[#919191] text-center italic font-semibold text-dots md:text-[13px]'>
+      <p className='text-[#919191] text-center italic font-semibold text-dots text-[13px] xl:text-sm'>
          {description}
       </p>
    );

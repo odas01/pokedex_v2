@@ -4,7 +4,7 @@ import Types from '@/components/Types';
 import Weaknesses from './Weaknesses';
 import Evolution from './Evolution';
 import Description from './Description';
-// import Stat from './Stat';
+ import Stat from './Stat';
 import Title from './Title';
 
 import useCurrentStore from '@/zustand/current.store';

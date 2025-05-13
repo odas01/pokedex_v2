@@ -88,12 +88,12 @@ const Detail = () => {
                         </div>
 
                         {/* STATS */}
-                        {/* <div className='mt-auto flex flex-col items-center p-4 w-full '>
+                        <div className='mt-auto flex flex-col items-center p-4 w-full '>
                            <span className='font-semibold text-sm lg:text-base mb-3'>
                               Stats
                            </span>
                            <Stat />
-                        </div> */}
+                        </div> 
 
                         {/* EVOLUTONS */}
                         <div className='mt-auto flex flex-col items-center w-full'>
